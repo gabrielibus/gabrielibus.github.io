@@ -1,0 +1,71 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Source+Code+Pro:wght@400;700;900&display=swap');
+.font1 {font-family: 'Arvo';}
+.font2 {font-family: 'Source Code Pro', monospace;}
+.condensed {
+    font-size: 1rem;
+    letter-spacing: -1px;
+}
+
+/* COLORS */
+.color1 {color: black}
+.color2 {color: teal}
+.color3 {color: lightgrey;}
+.color4 {color: #2d4767;}
+.color5 {color: #3a4043;}
+.bgColor1 {background-color: white;}
+.bgColor2 {background-color: teal;}
+.bgColor3 {background-color: lightgrey;}
+.bgColor4 {background-color: #f6f6f6;}
+.bgColor5 {background-color: #ff8872;}
+.bgColor6 {background-color: #6C6C6C;}
+
+/* DISPLAY */
+.flexRow {display: flex;flex-direction: row;}
+.flexCol {display: flex;flex-direction: column;}
+.spaceBetween {justify-content: space-between;}
+.spaceAround {justify-content: space-around;}
+.spaceEvenly {justify-content: space-evenly;}
+.center {justify-content: center;}
+.alignItemsFlexStart {align-items: flex-start;}
+.alignItemsStretch {align-items: stretch;}
+.alignItemsCenter {align-items: center;}
+.wrap {flex-wrap: wrap;}
+.wrapReverse {flex-wrap: wrap-reverse;}
+.verticalAlign {
+    vertical-align: top;
+    height: 1rem;
+    line-height: 1rem;
+}
+
+/* FORMAT */
+.bold {font-weight: bold;}
+.marginAuto {margin: auto;}
+.noDecoration {text-decoration: none;}
+.noMargin {margin: 0;}
+.paddingVertical {padding: 2rem 0;}
+.paddingRight {padding-right: 1rem;}
+.paddingLeft {padding-left: 1rem;}
+.padding {padding: 2rem;}
+.textAlignRight {text-align: right;}
+.textAlignCenter {text-align: center;}
+.marginRight {margin-right: 1rem;}
+.marginLeft {margin-left: 1rem;}
+.marginXauto {margin-left: auto;margin-right: auto;}
+/* WIDTH AND HEIGHT */
+.height100{height: 100%;}
+.width10 {width: 10%;}
+.width20 {width: 20%;}
+.width30 {width: 30%;}
+.width40 {width: 40%;}
+.width50 {width: 50%;}
+.width60 {width: 60%;}
+.width70 {width: 70%;}
+.width80 {width: 80%;}
+.width90 {width: 90%;}
+.width100 {width: 100%;}
+
+/* POSITION */
+.relative {position: relative;}
+.fixed {position: fixed;}
+.absolute {position: absolute;}

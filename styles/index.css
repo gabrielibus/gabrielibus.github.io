@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    max-width: 1024px;
+    min-width: 450px;
+    margin: auto;
+}
+
+/* CLASSES */
+.circle1 {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    margin-top: 5px;
+}
+
+.circle2 {
+    margin-top: 6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    left: calc(22% - 6px)
+}
+.imgBox {
+    width: 60%;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* IDs */
+#descriptionTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+#headerImg {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    clip-path: circle();
+}
+
+#headerSubtitle {
+    font-size: 1.2rem;
+}
+
+#headerTitle {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#horizontalLine {
+    width: calc(50% - 1rem);
+    height: 5px;
+    margin-top: 9px;
+    right: 0;
+}
+
+#hr {
+    height: 1px;background-color: #00C2CB;
+    border: none;
+    margin: 0.1rem 0;
+
+}
+
+#leftCircle1 {
+    left: calc(50% + (67% / 2));
+}
+#leftCircle2 {
+    left: calc(50% + (72% / 2));
+}
+#leftCircle3 {
+    left: calc(50% + (72% / 2));
+}
+#leftCircle4 {
+    left: calc(50% + (52% / 2));
+}
+#leftCircle5 {
+    left: calc(50% + (47% / 2));
+}
+#leftCircle6 {
+    left: calc(50% + (50% / 2));
+}
+#leftCircle7 {
+    left: calc(50% + (44% / 2));
+}
+
+#leftBox, #rightBox {
+    min-width: 380px;
+    max-width: 50%;
+}
+
+#phoneLink:hover, #mailLink:hover {
+    color: red;
+}
+
+#verticalLine {
+    left: calc(22%);
+    width: 5px;
+    height: 95%;
+ 
+}
+
+
+
+@media only screen and (max-width: 850px) {
+    #leftBox, #rightBox {
+        min-width: 380px;
+        max-width: 100%;
+    }
+    #rightBox {
+        margin-top: 4rem;
+        width: 100%;
+    }
+    #skills {margin-top: 2rem;}
+  }
