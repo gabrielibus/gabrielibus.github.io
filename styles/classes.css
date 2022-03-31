@@ -6,6 +6,9 @@
     font-size: 1rem;
     letter-spacing: -1px;
 }
+.titleBig {font-size: 2.5rem; font-weight: 600;}
+.titleNormal {font-size: 2rem; font-weight: 600;}
+
 
 /* COLORS */
 .color1 {color: black}
@@ -13,12 +16,14 @@
 .color3 {color: lightgrey;}
 .color4 {color: #2d4767;}
 .color5 {color: #3a4043;}
-.bgColor1 {background-color: white;}
-.bgColor2 {background-color: teal;}
-.bgColor3 {background-color: lightgrey;}
-.bgColor4 {background-color: #f6f6f6;}
-.bgColor5 {background-color: #ff8872;}
-.bgColor6 {background-color: #6C6C6C;}
+.color6 {color: #ff8872 !important }
+.bgColor1 {background-color: white !important;}
+.bgColor2 {background-color: #5ce1e6 !important;}
+.bgColor3 {background-color: lightgrey !important;}
+.bgColor4 {background-color: #f6f6f6 !important;}
+.bgColor5 {background-color: #ff8872 !important;}
+.bgColor6 {background-color: #6C6C6C !important;}
+.bgColor7 {background-color: #38b6ff !important;}
 
 /* DISPLAY */
 .flexRow {display: flex;flex-direction: row;}
@@ -30,7 +35,7 @@
 .alignItemsFlexStart {align-items: flex-start;}
 .alignItemsStretch {align-items: stretch;}
 .alignItemsCenter {align-items: center;}
-.wrap {flex-wrap: wrap;}
+.wrap {flex-wrap: wrap !important;}
 .wrapReverse {flex-wrap: wrap-reverse;}
 .verticalAlign {
     vertical-align: top;
@@ -40,18 +45,22 @@
 
 /* FORMAT */
 .bold {font-weight: bold;}
-.marginAuto {margin: auto;}
 .noDecoration {text-decoration: none;}
-.noMargin {margin: 0;}
-.paddingVertical {padding: 2rem 0;}
+.noMargin {margin: 0 !important;}
+.paddingVertical {padding-top: 1rem; padding-bottom: 1rem;}
 .paddingRight {padding-right: 1rem;}
 .paddingLeft {padding-left: 1rem;}
 .padding {padding: 2rem;}
+.paddingBottom {padding-bottom: 0.5rem;}
 .textAlignRight {text-align: right;}
+.textAlignLeft {text-align: left;}
 .textAlignCenter {text-align: center;}
+.marginAuto {margin: auto;}
 .marginRight {margin-right: 1rem;}
 .marginLeft {margin-left: 1rem;}
 .marginXauto {margin-left: auto;margin-right: auto;}
+.marginVertical {margin-top: 1rem; margin-bottom: 1rem;}
+
 /* WIDTH AND HEIGHT */
 .height100{height: 100%;}
 .width10 {width: 10%;}
@@ -64,8 +73,10 @@
 .width80 {width: 80%;}
 .width90 {width: 90%;}
 .width100 {width: 100%;}
+.minWidth50 {min-width: 50% !important;}
 
 /* POSITION */
 .relative {position: relative;}
 .fixed {position: fixed;}
 .absolute {position: absolute;}
+
