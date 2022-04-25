@@ -120,8 +120,8 @@ body {
 #modal1 {
     display: none;
     position: absolute;
-    background-color: white;
-    color: teal;
+    background-color: rgb(53, 53, 53);
+    color: white;
     padding: 0.5rem 1rem;
     text-align: left;
     border: 1px solid black;
