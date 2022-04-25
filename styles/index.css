@@ -117,6 +117,20 @@ body {
     background-color: white;
 }
 
+#modal1 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: teal;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
 .verticalLine {
     max-width: 5px;
     background-color: #63e8ad;
