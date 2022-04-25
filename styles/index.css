@@ -22,7 +22,7 @@ body {
     width: 16px;
     height: 16px;
     border-radius: 100%;
-    left: calc(22% - 6px);
+    left: calc(22% - 5.5px);
 }
 .imgBox {
     width: 60%;
