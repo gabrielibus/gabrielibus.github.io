@@ -1,13 +1,12 @@
 * {
     box-sizing: border-box;
     font-family: "Source Code Pro", monospace;
-    font-size:18px !important;
 }
 
 body {
     max-width: 1024px;
-    min-width: 450px;
     margin: auto;
+    font-size: 18px;
 }
 
 /* CLASSES */
@@ -131,5 +130,15 @@ body {
     }
     #skills {
         padding-bottom: 2rem;
+    }
+    #leftBox, #rightBox {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    #headerInfo, #headerImg {
+        margin: 0 !important;
+    }
+    #headerImg {
+        margin-bottom: 1rem !important;
     }
 }
