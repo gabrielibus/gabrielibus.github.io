@@ -4,323 +4,259 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./styles/classes.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>compuFacilito</title>
-    <style>
-    </style>
+    <!-- CDNs -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuración de colores personalizados para Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2c3e50', // Un azul oscuro/grisáceo
+                        secondary: '#3498db', // Un azul brillante
+                        accent: '#e67e22', // Naranja
+                        light: '#ecf0f1', // Gris claro
+                        dark: '#212121', // Negro/Gris muy oscuro
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body class="bgColor3">
-    <div id="globalWrapper" class="bgColor1 width100">
-        <header>
-            <div class="flexRow wrap spaceEvenly alignItemsCenter width100 marginAuto padding">
-                <img id="headerImg" class="marginRight" src="./img/me.png" alt="avatar">
-                <div id="headerInfo" class="marginLeft">
-                    <h1 id="headerTitle" class="font1 noMargin color5 textAlignCenter">GABRIEL LÓPEZ</h1>
-                    <span id="headerSubtitle bold" class="color2 font2">GEEK, INGENIERO, PROGRAMADOR</span>
-                    <hr id="hr" class="bgColor2 noMargin">
-                    <span class="font2 color1">
-                        <a id="phoneLink" class="noDecoration color1" href="http://wa.me/573007833611">tel. 3007833611</a>
-                        • <a id="mailLink" class="noDecoration color1"
-                            href="mailto:elcorreofacilito@gmail.com">elcorreofacilito@gmail.com</a>
-                    </span>
-                </div>
-            </div>
-        </header>
-        <div id="descriptionBox" class="width100 bgColor4 marginAuto font2 padding">
-            <p id="descriptionTitle" class="color4 textAlignCenter condensed">¿QUE TAL? ¡CONÓCEME UN POCO MÁS!</p>
-            <p class="relative">
-                <div id="modal1"><i class="color6">Expresión coloquial colombiana:</i> Que es muy listo o más listo de lo que se puede esperar.</div>
-                Me dicen <b class="color2">compuFacilito</b></a>. Soy un <b class="color4"> <span onmouseover="document.getElementById('modal1').style.display = 'block'" onmouseleave="document.getElementById('modal1').style.display = 'none'" class="color2">teso</span>
-                en tecnología</b> y un <b class="color4">apasionado de los sistemas informáticos.</b> Con más de
-                20 años de
-                experiencia en <b class="color4">Linux, Windows y macOs</b> y reparación de hardware. <b
-                class="color4">Ingeniero Químico</b>, con un
-                gusto especial por la <b class="color4">lógica</b>. Actualmente me desempeño como <b
-                class="color2"><i>freelance</i></b>.
-            </p>
-        </div>
-        <div id="articlesBox"
-            class="flexRow wrap alignItemsStretch bgColor1 spaceBetween width100 marginXauto paddingVertical">
-            <div id="leftBox" class="flexCol bgColor1 marginXauto width100">
-                <div id="softSkills" class="flexCol spaceBetween font2">
-                    <h2 class="textAlignCenter color4">SOFT SKILLS</h2>
-                    <div class="flexRow wrap center alignItemsFlexStart color4">
-                        <div class="flexCol width30 alignItemsCenter">
-                            <img class="imgBox" src="./img/icon1.png" alt="">
-                            <p class="textAlignCenter condensed">Capacidad <br> de análisis</p>
-                        </div>
-                        <div class="flexCol width30 alignItemsCenter">
-                            <img class="imgBox" src="./img/icon4.png" alt="">
-                            <p class="textAlignCenter condensed">Un ninja en sistemas</p>
-                        </div>
-                        <div class="flexCol width30 alignItemsCenter">
-                            <img class="imgBox" src="./img/icon3.webp" alt="">
-                            <p class="textAlignCenter condensed">Siempre aprendiendo y enseñando</p>
-                        </div>
-                        <div class="flexCol width30 alignItemsCenter">
-                            <img class="imgBox" src="./img/icon2.png" alt="">
-                            <p class="textAlignCenter condensed">¡Creatividad brutal!</p>
-                        </div>
-                        <div class="flexCol width30 alignItemsCenter">
-                            <img class="imgBox" src="./img/icon4.svg" alt="">
-                            <p class="textAlignCenter condensed">Trabajo <br> en equipo</p>
-                        </div>
-                        <div class="flexCol width30 alignItemsCenter">
-                            <img class="imgBox" src="./img/icon5.svg" alt="">
-                            <p class="textAlignCenter condensed">Capacidad de liderazgo</p>
-                        </div>
-                    </div>
-                </div>
+<body class="bg-light">
+    <div id="root"></div>
 
-                <div id="skills" class="width100 flexCol center">
-                    <h2 class="textAlignCenter color4">SKILLS</h2>
-                    <div class="flexRow center width90 relative">
-                        <div class="textAlignRight noMargin width50 paddingRight">React</div>
-                        <div id="horizontalLine" class="bgColor2"></div>
-                        <div id="leftCircle1" class="absolute circle1 bgColor6"></div>
-                        <p class="noMargin marginXauto"></p>
-                    </div>
-                    <div class="flexRow center width90 relative">
-                        <div class="textAlignRight noMargin width50 paddingRight">NodeJs</div>
-                        <div id="horizontalLine" class="bgColor2"></div>
-                        <div id="leftCircle2" class="absolute circle1 bgColor6"></div>
-                        <p class="noMargin marginXauto"></p>
-                    </div>
-                    <div class="flexRow center width90 relative">
-                        <div class="textAlignRight noMargin width50 paddingRight">JS, HTML, CSS</div>
-                        <div id="horizontalLine" class="bgColor2"></div>
-                        <div id="leftCircle3" class="absolute circle1 bgColor6"></div>
-                        <p class="noMargin marginXauto"></p>
-                    </div>
-                    <div class="flexRow center width90 relative">
-                        <div class="textAlignRight noMargin width50 paddingRight">Python</div>
-                        <div id="horizontalLine" class="bgColor2"></div>
-                        <div id="leftCircle4" class="absolute circle1 bgColor6"></div>
-                        <p class="noMargin marginXauto"></p>
-                    </div>
-                    <div class="flexRow center width90 relative">
-                        <div class="textAlignRight noMargin width50 paddingRight">Amazon AWS</div>
-                        <div id="horizontalLine" class="bgColor2"></div>
-                        <div id="leftCircle5" class="absolute circle1 bgColor6"></div>
-                        <p class="noMargin marginXauto"></p>
-                    </div>
-                    <div class="flexRow center width90 relative">
-                        <div class="textAlignRight noMargin width50 paddingRight">Git</div>
-                        <div id="horizontalLine" class="bgColor2"></div>
-                        <div id="leftCircle6" class="absolute circle1 bgColor6"></div>
-                        <p class="noMargin marginXauto"></p>
-                    </div>
-                    <div class="flexRow center width90 relative">
-                        <p class="textAlignRight noMargin width50 paddingRight">Inglés</p>
-                        <div id="horizontalLine" class="bgColor2"></div>
-                        <div id="leftCircle7" class="absolute circle1 bgColor6"></div>
-                        <p class="noMargin marginXauto">
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="rightBox" class="flexCol alignItemsCenter bgColor4 marginXauto color4 font2 width100">
-                <h2 class="width90 textAlignCenter">
-                    EXPERIENCIA COMO PROGRAMADOR
-                </h2>
-                <div class="flexRow width80 marginXauto">
-                    <div class="width90 marginAuto">
-                        <div class="relative">
-                            <div id="verticalLine" class="absolute bgColor5"></div>
-                            <div class="flexRow alignItemsFlexStart center">
-                                <div class="width30 color1 bold">2020</div>
-                                <div class="width70">
-                                    <div class="circle2 absolute bgColor5"></div>
-                                    <h3 class="noMargin">COMONO NORUEGA</h3>
-                                    <p class="condensed"><b>Fullstack developer</b><br>• React <br>• HTML <br>• CSS <br>• JS
-                                        <br>• NodeJs <br>• Express
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flexRow alignItemsFlexStart center">
-                                <div class="width30 color1 bold">2020</div>
-                                <div class="width70">
-                                    <div class="circle2 absolute bgColor5"></div>
-                                    <h3 class="noMargin">LOKL MEDELLÍN</h3>
-                                    <p class="condensed"><b>Fronted developer</b><br>• React <br>• NodeJs</p>
-                                </div>
-                            </div>
-                            <div class="flexRow alignItemsFlexStart center">
-                                <div class="circle2 absolute bgColor5"></div>
-                                <div class="width30 color1 bold">2021</div>
-                                <div class="width70">
-                                    <h3 class="noMargin">ENTREGAPP</h3>
-                                    <p class="condensed"><b>Fullstack developer</b> <br>• AWS<br>• NodeJs <br>• Python
-                                        <br>• Google Suite<br>• Raspberry Pi
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flexRow alignItemsFlexStart center">
-                                <div class="circle2 absolute bgColor5"></div>
-                                <div class="width30 color1 bold">2022</div>
-                                <div class="width70">
-                                    <h3 class="noMargin">FREELANCE</h3>
-                                    <p class="condensed"><b>Fullstack developer</b> <br>• NodeJs <br>• Python <br>• Google
-                                        Suite</p>
-                                </div>
-                            </div>
-                        </div>
+    <script type="text/babel">
+        const { useState } = React;
+
+        // --- DATOS ---
+        // Centralizar los datos hace que el código sea más fácil de mantener.
+        const skillsData = [
+            { name: 'Google App Script 🔥', level: 125, color: 'red-500' },
+            { name: 'Google Sheets 🥷', level: 94, color: 'green-400' },
+            { name: 'Data Science 🧮', level: 85, color: 'purple-500' },
+            { name: 'HTML/CSS 🖌️', level: 92, color: 'blue-400' },
+            { name: 'React/Svelte 🎨', level: 92, color: 'teal-400' },
+            { name: 'SSOO (Linux, Mac, Win) 💻', level: 93, color: 'gray-500' },
+            { name: 'Python, JS, NodeJs 🥸', level: 84, color: 'yellow-500' },
+            { name: 'Amazon AWS 🛍️', level: 45, color: 'orange-400' },
+        ];
+
+        const experienceData = [
+            { year: '2020', title: 'COMONO - NORUEGA', role: 'Frontend developer', tasks: ['React', 'HTML', 'CSS', 'JS', 'NodeJs', 'Express', "MongoDB"] },
+            { year: '2020', title: 'LOKL MEDELLÍN', role: 'Frontend developer', tasks: ['React', 'NodeJs'] },
+            { year: '2021', title: 'ENTREGAPP', role: 'Fullstack developer', tasks: ['AWS', 'NodeJs', 'Python', 'Google Suite', 'Raspberry Pi'] },
+            { year: '2023 a hoy', title: 'UNIVERSIDAD DIGITAL DE ANTIOQUIA IUD', role: 'Docente Cátedra', tasks: ['Consultoría informática', 'Desarrollo full stack', 'Gestión de proyectos',"Formación en estrategias empresariales", "Ruta de Emprendimiento IUD"] },
+        ];
+
+        // Datos para la sección de Arquitecto de Soluciones
+        const compuFacilitoCapabilities = [
+            { icon: '🤝', title: 'Consultoría Estratégica', description: 'Traduzco objetivos de negocio en soluciones tecnológicas eficientes.' },
+            { icon: '🏗️', title: 'Arquitectura de Software', description: 'Diseño sistemas escalables, seguros y robustos para el futuro.' },
+            { icon: '💻', title: 'Desarrollo Full-Stack', description: 'Creo aplicaciones completas a medida, desde la interfaz hasta el servidor.' },
+            { icon: '🔗', title: 'Integración de Sistemas', description: 'Conecto plataformas (ERP, APIs) para crear flujos de trabajo unificados.' },
+            { icon: '🤖', title: 'Automatización de Procesos', description: 'Optimizo la eficiencia operativa eliminando tareas manuales repetitivas.' },
+            { icon: '📊', title: 'Business Intelligence', description: 'Implemento soluciones de datos para una toma de decisiones informada.' }
+        ];
+
+        // --- COMPONENTES ---
+
+        // Componente para la barra de habilidad
+        function SkillBar({ name, level, color }) {
+            // El nivel máximo es 100%, pero permitimos más para el efecto visual
+            const displayLevel = Math.min(level, 100);
+            const isSupercharged = level > 100;
+            const barColor = isSupercharged ? 'bg-red-500' : `bg-${color}`;
+            const textColor = isSupercharged ? 'text-red-500 font-bold' : 'text-gray-700';
+
+            return (
+                <div className="flex items-center w-full my-2">
+                    <div className={`w-3/5 text-right pr-4 ${textColor}`} dangerouslySetInnerHTML={{ __html: name }}></div>
+                    <div className="w-2/5 bg-gray-200 rounded-full h-4 relative overflow-hidden">
+                        <div
+                            className={`${barColor} h-4 rounded-full transition-all duration-500`}
+                            style={{ width: `${displayLevel}%` }}
+                        ></div>
+                        {isSupercharged && (
+                            <div className="absolute top-0 h-4 bg-yellow-400 animate-ping" style={{ left: '98%' }}></div>
+                        )}
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div id="page2">
-        <h2 class="font1 titleBig paddingVertical">FORMACIÓN</h2>
-        <div>
-            <div class="flexCol wrap center width100 marginXauto paddingVertical bgColor4">
-                <h2 class="textAlignCenter titleNormal noMargin color6">UNIVERSITARIA</h2>
-                <div class="flexRow center alignItemsStretch width100 paddingLeft paddingRight">
-                    <div class="textAlignRight marginRight minWidth50 paddingLeft">
-                        <h3>INGENIERO</h3>
-                        <p>
-                            <b>U.P.B Medellín</b><br>
-                            ¿Quién dijo que un <b>filósofo</b> no puede
-                            hacer ingeniería?
-                        </p>
-                    </div>
-                    <div class="verticalLine">&nbsp;</div>
-                    <div class="textAlignLeft marginLeft minWidth50 paddingRight">
-                        <h3>FILÓSOFO</h3>
-                        <p>
-                            <b>U.P.B Medellín</b><br>
-                            ¿Quién dijo que un <b>ingeniero</b> no puede
-                            hacer filosofía?
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="flexCol wrap center width100 marginXauto paddingVertical bgColor7">
-                <h2 class="textAlignCenter titleNormal noMargin color1">TÉCNICA</h2>
-                <div class="flexRow center alignItemsStretch width100 paddingLeft paddingRight">
-                    <div class="textAlignRight marginRight minWidth50">
-                        <h3 class="width100">MASTER <br> CODING</h3>
-                        <p><b>Dev.f</b><br>
-                            • Html
-                            <br>
-                            • Css
-                            <br>
-                            • Javascript
-                        </p>
-                    </div>
-                    <div class="verticalLine">&nbsp;</div>
-                    <div class="textAlignLeft marginLeft minWidth50">
-                        <h3 class="width90">PRO <br> CODING</h3>
-                        <p><b>Dev.f</b><br>
-                            • MongoDb
-                            <br>
-                            • React
-                            <br>
-                            • NodeJs
-                        </p>
+            );
+        }
+
+        // Componente para un item de experiencia
+        function ExperienceItem({ item, isLast, color = 'secondary' }) {
+            const timelineColorClass = color === 'accent' ? 'bg-accent' : 'bg-secondary';
+            const textColorClass = color === 'accent' ? 'text-accent' : 'text-secondary';
+
+            return (
+                <div className="flex">
+                    {/* Columna de la línea de tiempo */}
+                    <div className="flex flex-col items-center w-10 mr-4">
+                        {/* Punto en la línea de tiempo */}
+                        <div className={`flex-shrink-0 w-4 h-4 ${timelineColorClass} rounded-full`}></div>
+                        {/* Línea vertical */}
+                        {!isLast && <div className={`w-px h-full ${timelineColorClass} mt-1`}></div>}
                     </div>
 
+                    {/* Contenido de la experiencia */}
+                    <div className="pb-8 w-full">
+                        <p className={`-mt-1.5 mb-1 text-sm font-semibold ${textColorClass}`}>{item.year}</p>
+                        <h4 className="text-lg font-bold text-white">{item.title}</h4>
+                        <p className="text-gray-300 mb-2">{item.role}</p>
+                        <ul className="list-disc list-inside text-gray-400 text-sm space-y-1">
+                            {item.tasks.map(task => <li key={task}>{task}</li>)}
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="flexCol wrap center width100 marginXauto paddingVertical bgColor4">
-                <h2 class="textAlignCenter titleNormal noMargin color6">AUTOFORMACIÓN</h2>
-                <div class="flexRow center alignItemsStretch width100 paddingLeft paddingRight">
-                    <div class="textAlignRight marginRight minWidth50">
-                        <h3>BACKEND</h3>
-                        <p class="marginLeft"><b>Amazon Web Services AWS</b><br>
-                            • Api Gateway <br>
-                            • Lambda <br>
-                            • DynamoDB
+            );
+        }
 
-                        </p>
-                    </div>
-                    <div class="verticalLine">&nbsp;</div>
-                    <div class="textAlignLeft marginLeft minWidth50">
-                        <h3>OTROS</h3>
-                        <p><b>Google Cloud Platform</b><br>
-                            • Google API<br>
-                            • Web apps<br>
-                            • App scripts</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flexCol wrap center width100 marginXauto">
-                <div class="flexRow center alignItemsStretch width100">
-                    <div
-                        class="textAlignRight marginRight minWidth50 bgColor2 marginXauto paddingVertical paddingRight">
-                        <h3 class="titleNormal noMargin">ESTUDIOS RECIENTES</h3>
-                        <p class="marginLeft">
-                            • Data Science<br>
-                            • Machine Learning<br>
-                            • Python<br>
-                            • ¡Y otro montón de cosas locas!
-                        </p>
-                    </div>
-                    <div class="textAlignLeft marginLeft minWidth50 bgColor7 marginXauto paddingVertical paddingLeft">
-                        <h3 class="titleNormal noMargin">ESTO ME APASIONA</h3>
-                        <p>
-                            • Tecnología<br>
-                            • Video juegos<br>
-                            • Música<br>
-                            • Filosofía<br>
-                            • Ensamblaje de hardware
-                        </p>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="flexRow wrap width100 marginAuto">
-                <div id="wrappeable" class="textAlignRight width40 bgColor5 paddingLeft paddingRight paddingVertical">
-                    <h2 class="textAlignCenter titleNormal noMargin">CONTÁCTAME</h2>
-                    <p>
-                        <b>GABRIEL JAIME LOPEZ RESTREPO</b><br><br>
-                        <a id="phoneLink" class="noDecoration color1" href="http://wa.me/573007833611">tel.
-                            3007833611</a><br>
-                        <a id="mailLink" class="noDecoration color1"
-                            href="mailto:elcorreofacilito@gmail.com">elcorreofacilito@gmail.com</a><br>
-                        Medellín - Colombia
-                    </p>
-                </div>
-                <div id="wrappeable" class="width60 bgColor3 paddingLeft paddingRight paddingVertical">
-                    <h2 class="textAlignCenter titleNormal noMargin">REFERENCIAS</h2>
-                    <div class="flexRow center alignItemsStretch">
-                        <div class="textAlignRight marginRight minWidth50">
-                            <p class="">
-                                <b>UN CLIENTE</b><br><br>
-                                Coppi Helados<br>
-                                Alejo Forero <br>
-                                <a id="phoneLink" class="noDecoration color1" href="http://wa.me/573007833611">tel.
-                                    3168781038</a><br>
-                                Medellín - Col
-                            </p>
+        // Componente para el tooltip "Teso"
+        function TesoTooltip() {
+            const [show, setShow] = useState(false);
+            return (
+                <span className="relative inline-block">
+                    <b
+                        className="text-secondary cursor-pointer"
+                        onMouseEnter={() => setShow(true)}
+                        onMouseLeave={() => setShow(false)}
+                    >
+                        teso
+                    </b>
+                    {show && (
+                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 w-48 p-2 mb-2 bg-accent text-white text-sm rounded-md shadow-lg z-10">
+                            <i className="text-gray-300">Expresión coloquial colombiana:</i> Que es muy listo o más listo de lo que se puede esperar.
                         </div>
-                        <div class="verticalLine">&nbsp;</div>
-                        <div class="textAlignLeft marginLeft minWidth50">
-                            <p class="">
-                                <b>UN FAMILIAR</b><br><br>
-                                AS3<br>
-                                Edwin López <br>
-                                <a id="phoneLink" class="noDecoration color1" href="http://wa.me/573007833611">tel.
-                                    3012778876</a><br>
-                                Medellín - Col
-                            </p>
-                            </p>
+                    )}
+                </span>
+            );
+        }
+
+        // --- Componente Principal ---
+        function App() {
+            // Datos para soft skills
+            const softSkillsData = [
+                { emoji: '🧠', text: 'Capacidad <br> de análisis' },
+                { emoji: '🥷', text: 'Un ninja en sistemas' },
+                { emoji: '📚', text: 'Siempre aprendiendo y enseñando' },
+                { emoji: '💡', text: '¡Creatividad brutal!' },
+                { emoji: '🤝', text: 'Trabajo <br> en equipo' },
+                { emoji: '🦁', text: 'Capacidad de liderazgo' },
+            ];
+
+            return (
+                <div className="max-w-5xl mx-auto bg-white shadow-lg">
+                    {/* Header */}
+                    <header className="flex flex-col md:flex-row items-center justify-center p-8 bg-primary text-light">
+                        <img className="w-44 h-44 rounded-full object-cover border-4 border-secondary mb-4 md:mb-0 md:mr-8" src="./img/me.png" alt="avatar" />
+                        <div className="text-center md:text-left">
+                            <h1 className="text-4xl font-bold tracking-widest text-white">GABRIEL LÓPEZ</h1>
+                            <p className="text-lg text-secondary font-semibold">GEEK, INGENIERO, PROGRAMADOR</p>
+                            <hr className="border-secondary my-2" />
+                            <div className="text-light">
+                                <a href="http://wa.me/573007833611" className="hover:text-accent">tel. 3007833611</a>
+                                <span className="mx-2">•</span>
+                                <a href="mailto:elcorreofacilito@gmail.com" className="hover:text-accent">elcorreofacilito@gmail.com</a>
+                            </div>
                         </div>
-                    </div>
+                    </header>
+
+                    {/* Description */}
+                    <section className="p-8 bg-light text-dark">
+                        <h2 className="text-2xl font-bold text-center text-primary mb-4">¿QUÉ TAL? ¡CONÓCEME UN POCO MÁS!</h2>
+                        <p className="text-left leading-relaxed">
+                            Me dicen <b className="text-accent">compuFacilito pero me llamo Gabriel</b>. Soy un <TesoTooltip /> en tecnología y un <b className="text-primary">apasionado de los sistemas informáticos.</b> Con más de 25 años de experiencia en <b className="text-primary">Informática. </b><b className="text-primary">Ingeniero Químico</b>, con un gusto especial por la <b className="text-primary">lógica</b>. Actualmente me desempeño como <b className="text-secondary"><i>fundador de compuFacilito y ARQUITECTO DE SOLUCIONES INFORMÁTICAS</i></b>.
+                        </p>
+                    </section>
+
+                    {/* Main Content */}
+                    <main className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+                        {/* Left Column */}
+                        <div className="flex flex-col gap-8">
+                            {/* Soft Skills */}
+                            <section>
+                                <h2 className="text-2xl font-bold text-center text-primary mb-4">SOFT SKILLS</h2>
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+                                    {softSkillsData.map(skill => (
+                                        <div key={skill.text} className="flex flex-col items-center p-2">
+                                            <div className="text-6xl mb-2">{skill.emoji}</div>
+                                            <p className="text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: skill.text }}></p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </section>
+
+                            {/* Skills */}
+                            <section>
+                                <h2 className="text-2xl font-bold text-center text-primary mb-4">SKILLS</h2>
+                                <div className="flex flex-col items-center">
+                                    {skillsData.map(skill => <SkillBar key={skill.name} {...skill} />)}
+                                </div>
+                            </section>
+                        </div>
+                        <hr className="border-gray-700 my-8" />
+
+                        {/* Right Column (Experience) */}
+                        <section className="bg-primary p-6 rounded-lg">
+                            <h2 className="text-2xl font-bold text-center text-white mb-6">Experiencia en compuFacilito</h2>
+                            {/* Sección destacada: Arquitecto de Soluciones */}
+                            <div>
+                                <h3 className="text-xl font-semibold text-accent text-center mb-2">desde el 2008</h3>
+                                <div className="text-center mb-6">
+                                    <p className="text-gray-400 mt-1">Arquitecto de soluciones informáticas</p>
+                                </div>
+                                <div className="grid grid-cols-1 gap-3">
+                                    {compuFacilitoCapabilities.map(cap => (
+                                        <div key={cap.title} className="bg-gray-800/50 p-3 rounded-lg flex items-center space-x-4 hover:bg-gray-700 transition-colors duration-300 cursor-default">
+                                            <div className="text-3xl flex-shrink-0">{cap.icon}</div>
+                                            <div>
+                                                <h5 className="font-semibold text-white">{cap.title}</h5>
+                                                <p className="text-gray-400 text-sm">{cap.description}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Timeline for Programmer */}
+                            <div class='mt-8'>
+                                <h3 className="text-xl font-semibold text-secondary text-center mb-4">Experiencia trabajando para terceros</h3>
+                                {experienceData.map((item, index) => (
+                                    <ExperienceItem
+                                        key={item.title}
+                                        item={item}
+                                        isLast={index === experienceData.length - 1}
+                                        color="secondary"
+                                    />
+                                ))}
+                            </div>
+
+
+
+                        </section>
+                    </main>
+
+                    {/* Footer */}
+                    <footer className="text-center p-4 bg-white text-sm text-gray-600">
+                        <p>CV diseñada y codeada por <a className="text-secondary hover:text-accent" href="https://compufacilito.com" target="_blank">compuFacilito</a> • CopyLeft 2022.</p>
+                    </footer>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="width100 bgColor1">
-        <p class="bgColor1 marginAuto textAlignCenter paddingVertical width100">Sitio pensado, diseñado y codeado por
-            <a class="noDecoration color2" href="https://compufacilito.com" target="_blank">compuFacilito</a> • CopyLeft
-            2022.
-        </p>
-    </div>
-    </div>
+            );
+        }
+
+        // --- Renderizar la App ---
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+    </script>
 </body>
 
 </html>
