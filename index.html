@@ -77,8 +77,8 @@
 
             return (
                 <div className="flex items-center w-full my-2">
-                    <div className={`w-3/5 text-right pr-4 ${textColor}`} dangerouslySetInnerHTML={{ __html: name }}></div>
-                    <div className="w-2/5 bg-gray-200 rounded-full h-4 relative overflow-hidden">
+                    <div className={`w-[45%] sm:text-left text-right pr-4 ${textColor}`} dangerouslySetInnerHTML={{ __html: name }}></div>
+                    <div className="w-[55%] sm:3/5 sm:text-left bg-gray-200 rounded-full h-4 relative overflow-hidden">
                         <div
                             className={`${barColor} h-4 rounded-full transition-all duration-500`}
                             style={{ width: `${displayLevel}%` }}
@@ -178,10 +178,9 @@
                     </section>
 
                     {/* Main Content */}
-                    <main className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
-                        {/* Left Column */}
-                        <div className="flex flex-col gap-8">
-                            {/* Soft Skills */}
+                    <main className="p-8 flex flex-col gap-8">
+                        {/* Fila de Skills */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <section>
                                 <h2 className="text-2xl font-bold text-center text-primary mb-4">SOFT SKILLS</h2>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
@@ -193,8 +192,6 @@
                                     ))}
                                 </div>
                             </section>
-
-                            {/* Skills */}
                             <section>
                                 <h2 className="text-2xl font-bold text-center text-primary mb-4">SKILLS</h2>
                                 <div className="flex flex-col items-center">
@@ -202,46 +199,46 @@
                                 </div>
                             </section>
                         </div>
-                        <hr className="border-gray-700 my-8" />
 
-                        {/* Right Column (Experience) */}
-                        <section className="bg-primary p-6 rounded-lg">
-                            <h2 className="text-2xl font-bold text-center text-white mb-6">Experiencia en compuFacilito</h2>
-                            {/* Sección destacada: Arquitecto de Soluciones */}
-                            <div>
-                                <h3 className="text-xl font-semibold text-accent text-center mb-2">desde el 2008</h3>
-                                <div className="text-center mb-6">
-                                    <p className="text-gray-400 mt-1">Arquitecto de soluciones informáticas</p>
-                                </div>
-                                <div className="grid grid-cols-1 gap-3">
-                                    {compuFacilitoCapabilities.map(cap => (
-                                        <div key={cap.title} className="bg-gray-800/50 p-3 rounded-lg flex items-center space-x-4 hover:bg-gray-700 transition-colors duration-300 cursor-default">
-                                            <div className="text-3xl flex-shrink-0">{cap.icon}</div>
-                                            <div>
-                                                <h5 className="font-semibold text-white">{cap.title}</h5>
-                                                <p className="text-gray-400 text-sm">{cap.description}</p>
+                        {/* Fila de Experiencia */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {/* Experiencia compuFacilito */}
+                            <section className="bg-primary p-6 rounded-lg">
+                                <div>
+                                    <h3 className="text-xl font-semibold text-accent text-center mb-2">compuFacilito (desde 2008)</h3>
+                                    <div className="text-center mb-6">
+                                        <h2 className="text-2xl font-bold text-white">Arquitecto de Soluciones Tecnológicas</h2>
+                                        <p className="text-gray-400 mt-1">Diseño, integro y automatizo sistemas para potenciar negocios.</p>
+                                    </div>
+                                    <div className="grid grid-cols-1 gap-3">
+                                        {compuFacilitoCapabilities.map(cap => (
+                                            <div key={cap.title} className="bg-gray-800/50 p-3 rounded-lg flex items-center space-x-4 hover:bg-gray-700 transition-colors duration-300 cursor-default">
+                                                <div className="text-3xl flex-shrink-0">{cap.icon}</div>
+                                                <div>
+                                                    <h5 className="font-bold text-white">{cap.title}</h5>
+                                                    <p className="text-gray-400 text-sm">{cap.description}</p>
+                                                </div>
                                             </div>
-                                        </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </section>
+
+                            {/* Experiencia para Terceros */}
+                            <section className="bg-primary p-6 rounded-lg">
+                                <div>
+                                    <h3 className="text-xl font-semibold text-secondary text-center mb-4">Colaboraciones y Proyectos para Terceros</h3>
+                                    {experienceData.map((item, index) => (
+                                        <ExperienceItem
+                                            key={item.title}
+                                            item={item}
+                                            isLast={index === experienceData.length - 1}
+                                            color="secondary"
+                                        />
                                     ))}
                                 </div>
-                            </div>
-
-                            {/* Timeline for Programmer */}
-                            <div class='mt-8'>
-                                <h3 className="text-xl font-semibold text-secondary text-center mb-4">Experiencia trabajando para terceros</h3>
-                                {experienceData.map((item, index) => (
-                                    <ExperienceItem
-                                        key={item.title}
-                                        item={item}
-                                        isLast={index === experienceData.length - 1}
-                                        color="secondary"
-                                    />
-                                ))}
-                            </div>
-
-
-
-                        </section>
+                            </section>
+                        </div>
                     </main>
 
                     {/* Footer */}
