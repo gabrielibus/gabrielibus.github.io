@@ -2,19 +2,30 @@
 <html lang="es">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MGCZFBWWWQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MGCZFBWWWQ');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel López / compuFacilito 😎</title>
     <link rel="icon" type="image/png" href="./img/me.png">
     <meta name="author" content="compuFacilito">
-    <meta name="description" content="Hoja de vida de Gabriel López / compuFacilito. Arquitecto de Soluciones Tecnológicas con experiencia en desarrollo full-stack, automatización y consultoría.">
+    <meta name="description"
+        content="Hoja de vida de Gabriel López / compuFacilito. Arquitecto de Soluciones Tecnológicas con experiencia en desarrollo full-stack, automatización y consultoría.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gabrielibus.github.io/">
-    <meta property="og:title" content="Gabriel López / compuFacilito 😎 - Arquitecto de Soluciones">
-    <meta property="og:description" content="Hoja de vida de Gabriel López / compuFacilito. Arquitecto de Soluciones Tecnológicas con experiencia en desarrollo full-stack, automatización y consultoría.">
+    <meta property="og:title" content="compuFacilito 😎 - Arquitecto de Soluciones">
+    <meta property="og:description"
+        content="Hoja de vida de Gabriel López / compuFacilito. Arquitecto de Soluciones Tecnológicas con experiencia en desarrollo full-stack, automatización y consultoría.">
     <meta property="og:image" content="https://gabrielibus.github.io/img/me.png">
     <!-- CDNs -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -150,6 +161,45 @@
             );
         }
 
+        // Componente para revelar el teléfono
+        function PhoneReveal() {
+            const [revealed, setRevealed] = useState(false);
+            // El número de teléfono en Base64 para ocultarlo de scrapers básicos
+            const encodedPhone = 'NTczMDA3ODMzNjEx'; // 573007833611
+
+            const handleReveal = (e) => {
+                e.preventDefault();
+                setRevealed(true);
+                // Registrar evento en GA4
+                if (typeof gtag === 'function') {
+                    gtag('event', 'reveal_phone', {
+                        'event_category': 'Engagement',
+                        'event_label': 'Reveal Phone Number'
+                    });
+                }
+            };
+
+            const phone = atob(encodedPhone);
+
+            if (!revealed) {
+                return (
+                    <button
+                        onClick={handleReveal}
+                        className="text-secondary hover:text-accent font-bold cursor-pointer"
+                        title="Clic para ver teléfono"
+                    >
+                        [Ver teléfono 📞]
+                    </button>
+                );
+            }
+
+            return (
+                <a href={`http://wa.me/${phone}`} className="hover:text-accent font-bold">
+                    {phone.replace('57', '')} 📱
+                </a>
+            );
+        }
+
         // --- Componente Principal ---
         function App() {
             // Datos para soft skills
@@ -171,8 +221,8 @@
                             <h1 className="text-4xl font-bold tracking-widest text-white">GABRIEL LÓPEZ</h1>
                             <p className="text-lg text-secondary font-semibold">INGENIERO, PROGRAMADOR, PROFE</p>
                             <hr className="border-secondary my-2" />
-                            <div className="text-light flex flex-wrap">
-                                <a href="http://wa.me/573007833611" className="hover:text-accent">3007833611</a>
+                            <div className="text-light flex flex-wrap items-center">
+                                <PhoneReveal />
                                 <span className="mx-2"></span>
                                 <a href="mailto:elcorreofacilito@gmail.com" className="hover:text-accent">elcorreofacilito@gmail.com</a>
                                 <span className="mx-2"></span>
